@@ -58,15 +58,5 @@ def delete_student(id):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
-```
 
-**`requirements.txt`:**
-```
-flask
-psycopg2-binary
-gunicorn
-```
 
-**`Procfile`** (no file extension):
-```
-web: gunicorn app:app
