@@ -5,8 +5,11 @@ import os
 app = Flask(__name__)
 
 def get_db():
-    return psycopg2.connect(os.environ.get("DATABASE_URL"))
-
+    database_url = os.environ.get("DATABASE_URL")
+    if database_url and database_url.startswith("postgres://"):
+        database_url = database_url.replace("postgres://", "postgresql://", 1)
+    conn = psycopg2.connect(database_url, sslmode='require')
+    return conn
 @app.route('/')
 def home():
     return "PaaS Assignment App is running!"
