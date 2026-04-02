@@ -1,17 +1,20 @@
 # PaaS Assignment – Flask App on Railway
 
-A simple web application demonstrating Platform-as-a-Service deployment 
+A simple web application demonstrating Platform-as-a-Service deployment
 using Railway, Python Flask, and PostgreSQL.
 
 ## Live URL
+
 https://your-app-name.up.railway.app
 
 ## GitHub Repository
-https://github.com/YOUR_USERNAME/paas-assignment
+
+https://github.com/Arigye-Dorcus/paas-assignment
 
 ---
 
 ## Tech Stack
+
 - **Language:** Python 3.11
 - **Framework:** Flask
 - **Database:** PostgreSQL (Railway managed)
@@ -21,6 +24,7 @@ https://github.com/YOUR_USERNAME/paas-assignment
 ---
 
 ## Features
+
 - Full CRUD operations on Students and Courses
 - PostgreSQL database integration
 - Environment variable configuration
@@ -31,44 +35,48 @@ https://github.com/YOUR_USERNAME/paas-assignment
 ## API Endpoints
 
 ### Students
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/students` | Get all students |
-| POST | `/students` | Add a new student |
-| PUT | `/students/<id>` | Update a student |
-| DELETE | `/students/<id>` | Delete a student |
+
+| Method | Endpoint         | Description       |
+| ------ | ---------------- | ----------------- |
+| GET    | `/students`      | Get all students  |
+| POST   | `/students`      | Add a new student |
+| PUT    | `/students/<id>` | Update a student  |
+| DELETE | `/students/<id>` | Delete a student  |
 
 ### Courses
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/courses` | Get all courses |
-| POST | `/courses` | Add a new course |
-| PUT | `/courses/<id>` | Update a course |
-| DELETE | `/courses/<id>` | Delete a course |
+
+| Method | Endpoint        | Description      |
+| ------ | --------------- | ---------------- |
+| GET    | `/courses`      | Get all courses  |
+| POST   | `/courses`      | Add a new course |
+| PUT    | `/courses/<id>` | Update a course  |
+| DELETE | `/courses/<id>` | Delete a course  |
 
 ### Enrollments
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/enrollments` | Get all enrollments |
-| POST | `/enrollments` | Enroll a student in a course |
+
+| Method | Endpoint       | Description                  |
+| ------ | -------------- | ---------------------------- |
+| GET    | `/enrollments` | Get all enrollments          |
+| POST   | `/enrollments` | Enroll a student in a course |
 
 ---
 
 ## Environment Variables
 
-| Variable | Description |
-|----------|-------------|
+| Variable       | Description                                   |
+| -------------- | --------------------------------------------- |
 | `DATABASE_URL` | PostgreSQL connection string (set by Railway) |
-| `SECRET_KEY` | App secret key |
-| `FLASK_ENV` | Environment (development/production) |
-| `PORT` | Port number (set by Railway) |
+| `SECRET_KEY`   | App secret key                                |
+| `FLASK_ENV`    | Environment (development/production)          |
+| `PORT`         | Port number (set by Railway)                  |
 
 ---
 
 ## Local Setup
+
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/paas-assignment.git
+git clone https://github.com/Arigye-Dorcus/paas-assignment.git
 cd paas-assignment
 
 # Create virtual environment
@@ -105,6 +113,7 @@ python app.py
 **students** — stores student records  
 **courses** — stores course information  
 **enrollments** — links students to courses (many-to-many)
+
 ```
 
 ---
@@ -112,6 +121,7 @@ python app.py
 ## `.env.example`
 *(a safe template others can copy — has no real values)*
 ```
+
 DATABASE_URL=postgresql://username:password@localhost/dbname
 SECRET_KEY=your-secret-key-here
 FLASK_ENV=development
